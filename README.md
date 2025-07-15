@@ -64,6 +64,7 @@ Just use `= Course Category Name` to create a new category. For example, if you 
 The #course function formats the details for a single course. All parameters are named. If a field is not applicable (e.g., a course has no textbook), you can simply omit that parameter.
 Here is a blank template for a single course:
 
+```typst
 #course(
   // --- Basic Information ---
   name: "[Course Name]",
@@ -93,3 +94,5 @@ Here is a blank template for a single course:
     // 1. "Book Title" by Author, Publisher, Year.
   ],
 )
+
+```
