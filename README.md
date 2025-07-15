@@ -23,24 +23,113 @@ In the `course_description.typ` file, you just need to fill in the information o
 Please begin your `course_description.typ` file with the following metadata:
 
 ```typst
+# SZTU Course Description Template
+
+This template is based on the [typst-course-description-template](https://github.com/dsyislearning/typst-course-description-template) by [dsyislearning](https://github.com/dsyislearning). It has been modified to better suit the specific requirements of Shenzhen Technology University (SZTU) and updated for compatibility with modern Typst versions.
+
+This repository contains a template for creating a Course Description document using [Typst](https://typst.app/). It is designed to assist in generating clear and professional course summaries, especially useful for SZTU students who need to present course details in a standardized format when applying to universities.
+
+## Preview
+
+The appearance may vary slightly based on your content. It is recommended to update the preview images after generating your own document.
+
+| ![main_page-0001](./assets/course_description-1.jpg) | ![main_page-0002](./assets/course_description-2.jpg) |
+| ---------------------------------------------- | ---------------------------------------------- |
+| ![main_page-0003](./assets/course_description-3.jpg) | ![main_page-0004](./assets/course_description-4.jpg) |
+
+## Installation
+
+To use this template, you need a local Typst environment. This template is compatible with **Typst v0.11.0 and newer**.
+
+For a detailed Chinese tutorial on setting up the environment, please refer to this **[Zhihu article](https://zhuanlan.zhihu.com/p/644816041)**.
+
+## Usage
+
+You only need to edit the `main.typ` file. Fill in your personal information and the details for each course. The template will automatically generate a professional PDF document.
+
+### Metadata
+
+At the beginning of your `main.typ` file, configure your personal and document settings. **Remember to place your image assets (like logos) in the specified `image_path` directory.**
+
+```typst
 #import "template.typ": template, course
 
 #show: template.with(
-  university: "The name of your University",
-  major: "The name of your major",
-  school: "The name of your School / Department",
-  name: "Your Name",
-  id: "Your Student ID",
-  // The cover image settings
+  // University Info (fixed for SZTU)
+  university: "Shenzhen Technology University",
+  
+  // ----- Your Personal Information -----
+  major: "[Your Major Name]",         // e.g., "Computer Science and Technology"
+  school: "[Your College Name]",      // e.g., "College of Big Data and Internet"
+  name: "[Your Name]",                // e.g., "LI Si"
+  id: "[Your Student ID]",            // e.g., "2021XXXXXX"
+  image_path: "images/",              // The folder where your images are stored
+  
+  // ----- Document Appearance -----
+  // Cover image settings
   cover: (
-    logo_path: "logo_bupt2.png",
-    logo_width: 100%,
-    logo_with_university_name: true,
+    logo_path: "SZTU_logo.png",
+    logo_width: 40%,
+    logo_with_university_name: false,
   ),
-  // The watermark image settings as the background of the document
+  // Watermark settings for the document background
   watermark: (
-    img_path: "logo_bupt_translucent.png",
-    img_width: 160mm,
+    img_path: "SZTU_logo_translucent.png",
+    img_width: 100mm,
+  ),
+)# SZTU Course Description Template
+
+This template is based on the [typst-course-description-template](https://github.com/dsyislearning/typst-course-description-template) by [dsyislearning](https://github.com/dsyislearning). It has been modified to better suit the specific requirements of Shenzhen Technology University (SZTU) and updated for compatibility with modern Typst versions.
+
+This repository contains a template for creating a Course Description document using [Typst](https://typst.app/). It is designed to assist in generating clear and professional course summaries, especially useful for SZTU students who need to present course details in a standardized format when applying to universities.
+
+## Preview
+
+The appearance may vary slightly based on your content. It is recommended to update the preview images after generating your own document.
+
+| ![main_page-0001](./assets/course_description-1.jpg) | ![main_page-0002](./assets/course_description-2.jpg) |
+| ---------------------------------------------- | ---------------------------------------------- |
+| ![main_page-0003](./assets/course_description-3.jpg) | ![main_page-0004](./assets/course_description-4.jpg) |
+
+## Installation
+
+To use this template, you need a local Typst environment. This template is compatible with **Typst v0.11.0 and newer**.
+
+For a detailed Chinese tutorial on setting up the environment, please refer to this **[Zhihu article](https://zhuanlan.zhihu.com/p/644816041)**.
+
+## Usage
+
+You only need to edit the `main.typ` file. Fill in your personal information and the details for each course. The template will automatically generate a professional PDF document.
+
+### Metadata
+
+At the beginning of your `main.typ` file, configure your personal and document settings. **Remember to place your image assets (like logos) in the specified `image_path` directory.**
+
+```typst
+#import "template.typ": template, course
+
+#show: template.with(
+  // University Info (fixed for SZTU)
+  university: "Shenzhen Technology University",
+  
+  // ----- Your Personal Information -----
+  major: "[Your Major Name]",         // e.g., "Computer Science and Technology"
+  school: "[Your College Name]",      // e.g., "College of Big Data and Internet"
+  name: "[Your Name]",                // e.g., "LI Si"
+  id: "[Your Student ID]",            // e.g., "2021XXXXXX"
+  image_path: "images/",              // The folder where your images are stored
+  
+  // ----- Document Appearance -----
+  // Cover image settings
+  cover: (
+    logo_path: "SZTU_logo.png",
+    logo_width: 40%,
+    logo_with_university_name: false,
+  ),
+  // Watermark settings for the document background
+  watermark: (
+    img_path: "SZTU_logo_translucent_1.png",
+    img_width: 100mm,
   ),
 )
 ```
