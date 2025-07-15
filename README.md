@@ -6,9 +6,9 @@ This repository contains a template for creating Course Description using [Typst
 
 ## Preview
 
-| ![main_page-0001](./assets/main_page-0001.jpg) | ![main_page-0002](./assets/main_page-0002.jpg) |
+| ![main_page-0001](./assets/course_description-1.jpg) | ![main_page-0002](./assets/course_description-2.jpg) |
 | ---------------------------------------------- | ---------------------------------------------- |
-| ![main_page-0003](./assets/main_page-0003.jpg) | ![main_page-0004](./assets/main_page-0004.jpg) |
+| ![main_page-0003](./assets/course_description-3.jpg) | ![main_page-0004](./assets/course_description-4.jpg) |
 
 ## Installation
 
@@ -61,34 +61,35 @@ Just use `= Course Category Name` to create a new category. For example, if you 
 
 ### Course Description Items
 
-The `#course` function's parameters are all named parameters. If you don't want to fill in some of the parameters, you can just don't use them. For example, if you don't need 'Pre-requisites', you can just write
+The #course function formats the details for a single course. All parameters are named. If a field is not applicable (e.g., a course has no textbook), you can simply omit that parameter.
+Here is a blank template for a single course:
 
-```typst
 #course(
-  name: [Course Name 1],
-  id: [Course ID 1],
-  semester: [Semester 1],
-  credit: [Credit 1],
-  hours: [Hours 1],
-  grade: [Grade 1],
-  preparatory: [Preparatory Course(s) 1],
-  content: [
-    - Chapter 1
-    - Chapter 2
-    - Chapter 3
-  ],
+  // --- Basic Information ---
+  name: "[Course Name]",
+  course_type: "[Course Type, e.g., Required, Elective]",
+  semester: "[Semester Taken, e.g., 2022-2023 Semester 1]",
+  credit: "[Number of SZTU Credits]",
+  ECTS_credit: "[Number of ECTS Credits]",
+  grade: "[Your Grade, e.g., A, B+, Pass]",
+  
+  // --- Detailed Descriptions ---
   description: [
-    The main body of Course Description 1 \
-    #lorem(100)
+    // Provide a comprehensive overview of the course.
+    // What are the main goals? What key concepts are covered?
+  ],
+  content: [
+    // List the main chapters, topics, or modules.
+    - Chapter 1: [Topic A]
+    - Chapter 2: [Topic B]
+    - ...
   ],
   assessment: [
-    - Assignment 1
-    - Assignment 2
-    - Assignment 3
-    - Exam 1
-    - Exam 2
+    // List the assessment methods and their respective weights.
+    // Example: Attendance (10%), Homework (30%), Final Exam (60%).
+  ],
+  literature: [
+    // List the required or recommended textbooks.
+    // 1. "Book Title" by Author, Publisher, Year.
   ],
 )
-```
-
-and the 'Pre-requisites' part will not be shown in this course description table.
