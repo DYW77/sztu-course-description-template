@@ -16,11 +16,11 @@ To use this template, you need a local Typst environment. For a detailed Chinese
 
 ## Usage
 
-In the `main.typ` file, you just need to fill in the information of your university, major, school, name, student ID, and the details of each course. The template will automatically generate a PDF file with the course descriptions.
+In the `course_description.typ` file, you just need to fill in the information of your university, major, school, name, student ID, and the details of each course. The template will automatically generate a PDF file with the course descriptions.
 
 ### Metadata
 
-Please begin your `main.typ` file with the following metadata:
+Please begin your `course_description.typ` file with the following metadata:
 
 ```typst
 #import "template.typ": template, course
