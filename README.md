@@ -1,6 +1,6 @@
 # SZTU Course Description Template
 
-This template is based on the [typst-course-description-template](https://github.com/dsyislearning/typst-course-description-template) by [dsyislearning](https://github.com/dsyislearning). It has been modified to better suit the specific requirements of SZTU.```
+This template is based on the [typst-course-description-template](https://github.com/dsyislearning/typst-course-description-template) by [dsyislearning](https://github.com/dsyislearning). It has been modified to better suit the specific requirements of SZTU.
 
 This repository contains a template for creating Course Description using [Typst](https://typst.app/). It is designed to assist in generating clear and professional course summaries, especially useful for students at Shenzhen Technology University (SZTU) who need to present course details in a standardized and visually appealing format when applying to universities.
 
